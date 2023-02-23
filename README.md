@@ -7,6 +7,10 @@ This Wiki uses the Star Wars API [swapi.dev](https://swapi.dev/). It was written
 + Redux
 + Bootstrap
 
+## Hosted
+
+Follow this link to view a built, hosted version of this app.
++ [star-wars-wiki-react.vercel.app](https://star-wars-wiki-react.vercel.app/)
 ## Client specification
 
 Written as a technical test, but with the following client spec:
