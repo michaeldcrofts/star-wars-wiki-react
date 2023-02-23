@@ -1,0 +1,7 @@
+{
+    "baseURL": "https://swapi.dev/api/",
+    "characterURI": "people/",
+    "planetURI": "planets/",
+    "filmURI": "film/",
+    "starshipURI": "starships/"
+}

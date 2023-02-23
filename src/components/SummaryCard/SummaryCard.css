@@ -1,0 +1,31 @@
+
+.link-card {
+    text-align: left;
+  }
+  
+  .link-card a{
+    text-decoration:none;
+    color: var(--secondary-color);
+  }
+  
+  .link-card a:hover > .card-body{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+  }
+  
+  .link-card a:hover > .card-header{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+  }
+  
+  .link-card .card-body .card-text{
+    margin-left: 1vw;
+  }
+  
+  .link-card .card-header {
+    background-color: var(--secondary-color);
+  }
+  
+  .link-card .card-body {
+    background-color: var(--primary-color);
+  }

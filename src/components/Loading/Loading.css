@@ -1,0 +1,25 @@
+/* CSS Loader Animation */
+.loader {
+    /* Centre Loader */
+    width: 20vmax;
+    margin: 5vh auto;
+}
+.loader .loading-animation {
+    width: 10vmax;
+    height: 10vmax;
+    border: 1.4vmax solid var(--primary-color); 
+    border-top: 1.4vmax solid var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+    margin: auto;
+}
+.loader > p {
+    font-size: 2vh;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+/* spin property, referenced by .loader class */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

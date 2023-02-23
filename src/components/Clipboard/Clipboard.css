@@ -1,0 +1,42 @@
+.clipboard-card {
+    width: 80%;
+    margin: 2vh auto 0 auto;
+  }
+  
+  
+  .clipboard-card .card-body {
+    background-color: var(--primary-color);
+    font-size: 2vh;
+    text-align: left;
+  }
+  
+  .clipboard-card .card-body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .clipboard-card .card-body .withBorder {
+    border-bottom: 0.1vh solid var(--secondary-color);
+    padding: 1vh;
+  }
+  
+  .clipboard-card .card-body .category {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+  
+  .clipboard-card .card-header {
+    background-color: var(--secondary-color);
+  }
+  
+  .clipboard-card .card-header .card-title{
+    font-size: 3vh;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .clipboard-card {
+      width: 100%;
+    }
+  }

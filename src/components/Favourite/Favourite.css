@@ -1,0 +1,19 @@
+.favourite-star {
+  position: absolute;
+  right: 1vw;
+  top: 1.5vh;
+}
+
+.favourite-star.empty:hover {
+  cursor: pointer;
+  fill: var(--primary-color);
+}
+
+.favourite-star.filled {
+  color: var(--primary-color);
+}
+
+.favourite-star.filled:hover {
+  cursor: pointer;
+  color: inherit;
+}
