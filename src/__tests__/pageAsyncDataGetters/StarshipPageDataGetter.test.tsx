@@ -1,11 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { MemoryRouter } from 'react-router-dom';
-import { fetchStarships } from '../../store/StarshipListSlice';
 import StarshipList from '../../pageAsyncDataGetters/StarshipPageDataGetter';
 
 jest.mock('../../store/store');
-//jest.mock('../../store/StarshipListSlice');
 
 describe('StarshipList component', () => {
   const mockDispatch = jest.fn();
