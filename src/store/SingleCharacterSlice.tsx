@@ -96,22 +96,29 @@ export const fetchCharacter = createAsyncThunk(
             const filmData = await getData(filmUrl) as Film;
             return filmData;
           });
-          const filmsData = await Promise.all(getFilms);
+          
           const getSpecies = characterData.species.map(async (speciesUrl) => {
             const speciesData = await getData(speciesUrl) as Species;
             return speciesData;
           });
-          const speciesData = await Promise.all(getSpecies);
+          
           const getStarships = characterData.starships.map(async (starshipUrl) => {
             const starshipData = await getData(starshipUrl) as Starship;
             return starshipData;
           });
-          const starshipsData = await Promise.all(getStarships);
+         
           const getVehicles = characterData.vehicles.map(async (vehicleUrl) => {
             const vehicleData = await getData(vehicleUrl) as Vehicle;
             return vehicleData;
           });
-          const vehiclesData = await Promise.all(getVehicles);
+
+          const [filmsData, speciesData, starshipsData, vehiclesData] = await Promise.all([
+            Promise.all(getFilms),
+            Promise.all(getSpecies),
+            Promise.all(getStarships),
+            Promise.all(getVehicles),
+          ]);
+          
           dispatch(getVehiclesSuccess(vehiclesData));
           dispatch(getStarshipsSuccess(starshipsData));
           dispatch(getSpeciesSuccess(speciesData));

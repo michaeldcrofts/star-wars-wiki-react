@@ -78,13 +78,16 @@ export const fetchStarship = createAsyncThunk(
             const characterData = await getData(characterUrl) as Character;
             return characterData;
           });
-          const charactersData = await Promise.all(getCharacters);
 
           const getFilms = starshipData.films.map(async (filmUrl) => {
             const filmData = await getData(filmUrl) as Film;
             return filmData;
           });
-          const filmsData = await Promise.all(getFilms);
+
+          const [charactersData, filmsData] = await Promise.all([
+            Promise.all(getCharacters),
+            Promise.all(getFilms)
+          ]);
 
           dispatch(getCharactersSuccess(charactersData));
           dispatch(getFilmsSuccess(filmsData));
